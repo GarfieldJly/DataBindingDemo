@@ -21,7 +21,6 @@ public class ThirdActivity extends Activity {
 
         ActivityThirdBinding binding = DataBindingUtil.setContentView(this,R.layout.activity_third);
 
-
         for(int i = 0; i < 20; i++){
             People people = new People();
             people.name.set("媛媛"+i);
