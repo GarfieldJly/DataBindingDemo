@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android">
+    <data class=".Custom">
+        <!--<import type="pathdemo.zhexin.garfieldjlyproject.bean.UserBean" alias="User"/>-->
+        <import type="java.util.ArrayList"/>
+        <import type="pathdemo.zhexin.garfieldjlyproject.bean.EventsHandle"/>
+        <import type="pathdemo.zhexin.garfieldjlyproject.bean.People" alias="Person"/>
+        <!--<variable-->
+            <!--name="user"-->
+            <!--type="User"/>-->
+        <variable
+            name="familyname"
+            type="String"/>
+        <variable
+            name="people"
+            type="int"/>
+        <variable
+            name="error"
+            type="boolean"/>
+        <variable
+            name="money"
+            type="float"/>
+        <variable
+            name="handlers"
+            type="EventsHandle"/>
+        <variable
+            name="OnClick"
+            type="pathdemo.zhexin.garfieldjlyproject.MainActivity"/>
+        <variable
+            name="person"
+            type="Person"/>
+        <!--<variable-->
+            <!--name="list"-->
+            <!--type="ArrayList&lt;String>"/>-->
+    </data>
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="pathdemo.zhexin.garfieldjlyproject.MainActivity">
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@{user.name}"/>-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@{String.valueOf(user.age)}"/>-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:onClick="@{handlers.handleClick}"-->
+        <!--android:text="@{list[listKey]}"/>-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="@{OnClick.click}"
+        android:text="@{String.valueOf(money)}"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text='@{error ? "1" : "2"}'/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{person.name}"/>
+</LinearLayout>
+</layout>
